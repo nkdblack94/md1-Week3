@@ -22,15 +22,15 @@
         if (so < 2) {
             return 'Không có số nào là SNT';
         } else if (so === 2) {
-            return  'Có một SNT duy nhất là: 2';
+            return 'Có một SNT duy nhất là: 2';
         }
         for (let i = 2; i <= so; i++) {
-           let Result = Check(i);
+            let Result = Check(i);
             if (Result !== false) {
                 SequenceNumbers += (Result + ', ');
                 j++
             }
-            if (j >= 20){
+            if (j >= 20) {
                 return '20 SNT đầu tiên là: ' + SequenceNumbers;
             }
         }
