@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        tr, td{
+            width: 100px;
+            height: 30px;
+        }
+    </style>
+</head>
+<body>
+<script language="JavaScript">
+    function Print(number) {
+        let so = parseInt(number);
+        let table = '<table border="1" cellspacing="0" cellpadding="0">';
+        for (let i = 1; i <= 10; i++){
+            table = table + '<tr>';
+            for (let j = 2; j < so; j++){
+                table = table + '<td>' + j + ' x ' + i + ' = ' + i * j + '</td>';
+            }
+            table = table + '</tr>';
+        }
+        table = table + '</table>';
+        document.write(table);
+    }
+
+    Print(10);
+</script>
+</body>
+</html>
