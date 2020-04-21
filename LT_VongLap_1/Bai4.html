@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script language="JavaScript">
+    function Count(number) {
+        let so = parseInt(number);
+        if (so % 5 === 0) {
+            return true;
+        }
+        return false;
+    }
+
+    function Fibonaci(number) {
+        let a0 = 0, a1 = 1, a2 = 0, Result = '', j = 0;
+        for (let i = 1; i < number; i++) {
+            if (i < 2 && Count(i)) {
+                Result += i + '</br>'
+            } else {
+                a2 = a0 + a1;
+                a0 = a1;
+                a1 = a2;
+                if (Count(a2)) {
+                    Result += a2 + '</br>';
+                    j++
+                }
+            }
+            if (j === 1) {
+                document.getElementById('xuat').innerHTML = 'Số đầu tiên trong dãy fibonaci chia hết cho 5 là: ' + '</br>' + '</br>' + Result;
+                break;
+            }
+        }
+    }
+</script>
+
+<h1 style="color: blue">Tìm số đầu tiên trong day số fibonaci chia hết cho 5</h1>
+<p>Nhập dãy fibonaci cần tìm từ 1 tơi:</p>
+<input id="number" type="text"/>
+<button type="button" onclick="Fibonaci(number.value)">Click</button>
+<div><p>Result:</p></div>
+<div id="xuat" style="color: crimson"></div>
+</body>
+</html>
