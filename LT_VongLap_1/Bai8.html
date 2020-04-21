@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script language="JavaScript">
+    function GuessNumber() {
+        let number = parseInt(prompt('Bạn muốn đoán trong khoảng nào'));
+        let number1 = Math.floor(Math.random() * number);
+        let number2 = parseInt(prompt('Nhập số bạn muốn đoán'));
+        for (let i = 0; i < 2; i++){
+            if (number2 === number1){
+                document.write('<h1>Chúc mừng bạn đã thắng</h1>')
+                break;
+            } else if (number2 < number1){
+                number2 = parseInt(prompt('<h1>Số nhỏ hơn Game Over</h1>'));
+            } else if (number2 > number1){
+                number2 = parseInt(prompt('<h1 >Số lớn hơn Game Over</h1>'));
+            }
+            document.write('<h1>Game Over</h1>')
+        }
+    }
+</script>
+<div align="center">
+<h1>Game "Hãy thử đoán xem!"</h1>
+<button style="width: 50px; height: 30px" type="button" onclick="GuessNumber()">Start</button>
+</div>
+</body>
+</html>
