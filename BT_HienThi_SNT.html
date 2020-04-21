@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hiển thị số nguyên tố đầu tiên</title>
+</head>
+<body>
+<script language="JavaScript">
+    function Check(number) {
+        for (let i = 2; i < number; i++) {
+            if ((number % i) === 0) {
+                return false;
+            }
+        }
+        return number;
+    }
+
+    function Display(number) {
+        let so = parseInt(number);
+        let SequenceNumbers = '';
+        let j = 0;
+        if (so < 2) {
+            return 'Không có số nào là SNT';
+        } else if (so === 2) {
+            return  'Có một SNT duy nhất là: 2';
+        }
+        for (let i = 2; i <= so; i++) {
+           let Result = Check(i);
+            if (Result !== false) {
+                SequenceNumbers += (Result + ', ');
+                j++
+            }
+            if (j >= 20){
+                return '20 SNT đầu tiên là: ' + SequenceNumbers;
+            }
+        }
+        return 'Dãy SNT là: ' + SequenceNumbers;
+
+    }
+</script>
+
+<h1 style="color: blue">Hiển thị các số nguyên tố</h1>
+<input type="text" id="number"/>
+<button type="button" onclick="xuat.innerHTML = Display(number.value)">In</button>
+<div id="xuat">Result</div>
+</body>
+</html>
