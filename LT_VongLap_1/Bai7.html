@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script language="JavaScript">
+    function Print() {
+        let Result = '';
+        for (let i = 1; i <= 100; i++){
+            if (i % 3 === 0 && i % 5 === 0){
+               Result += 'FizzBuzz' + '</br>'
+            } else if (i % 3 === 0){
+                Result += 'Fizz' + '</br>'
+            } else if (i % 5 ===0){
+                Result += 'Buzz' + '</br>'
+            } else {
+                Result += i + '</br>'
+            }
+        }
+        document.write(Result)
+    }
+    Print();
+</script>
+</body>
+</html>
