@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script language="JavaScript">
+    function Count(number) {
+        let so = parseInt(number);
+        let Result = 0, j = 0;
+        for (let i = 0; i < so; i++){
+            if (i % 7 === 0){
+                Result += i;
+                j++
+            }
+            if (j === 30){
+                return 'Tổng của 30 số đầu tiên chia hết cho 7 là: ' + Result;
+            }
+        }
+        if (j < 30){
+            return 'Không đủ 30 số chia hết cho 7 bạn cần nhập tăng lên nữa'
+        }
+    }
+</script>
+
+<h1 style="color: blue">Tính tổng của 30 số đầu tiên chia hết cho 7 trong các số tự nhiên.</h1>
+<div>nhập số từ 1 tới:</div>
+<input type="text" id="number"/>
+<button type="button" onclick="xuat.innerHTML = Count(number.value)">Click</button>
+<p id="xuat"></p>
+</body>
+</html>
