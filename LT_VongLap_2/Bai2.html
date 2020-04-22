@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script language="JavaScript">
+    function Count(number) {
+        let Result = number;
+        if (number === 0 || number === 1){
+            return 1;
+        }
+        while (number > 1){
+            number--;
+            Result *= number;
+        }
+        return 'Giai thừa của ' + number + ' là: ' + Result;
+    }
+</script>
+
+<h1>Tính giai thừa của một số nguyên dương</h1>
+<input id="number" type="text"/>
+<button type="button" onclick="xuat.innerHTML=Count(number.value)">click</button>
+<div id="xuat"></div>
+</body>
+</html>
