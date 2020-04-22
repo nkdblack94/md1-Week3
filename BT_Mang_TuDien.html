@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script language="JavaScript">
+    function Translate(text) {
+        let arr1 = ['people', 'history', 'way', 'art', 'world', 'information', 'map', 'two', 'family', 'government'];
+        let arr2 = ['Người', 'Lịch sử', 'Đường', 'Nghệ thuật', 'Thế giới', 'Thông tin', 'Bản đồ', 'Hai', 'Gia đình', 'Chính phủ'];
+        let result = '';
+        for (let i = 0; i < arr1.length; i++){
+            if (text === arr1[i]){
+                result = arr2[i];
+                document.getElementById('xuat').innerHTML =  text + ' Tiếng Việt: ' + result;
+                break;
+            }if (text !== arr1[i]){
+                document.getElementById('xuat').innerHTML =  text + ' Không tìm thấy'
+            }
+        }
+    }
+</script>
+<form id="nhap">
+    <h1>Ứng dụng cho phép tra cứu các từ tiếng Anh sang tiếng Việt.</h1>
+    <input id="text" type="text"/>
+    <button type="button" onclick="Translate(text.value)">Dịch</button>
+    <div style="color: blue" id="xuat"></div>
+</form>
+</body>
+</html>
