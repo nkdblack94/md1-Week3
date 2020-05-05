@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Finonaci</title>
+</head>
+<body>
+<script language="JavaScript">
+    function Finonaci(number) {
+        let a0 = 0,a1 = 1,a2 = 0;
+        for (let i = 0; i < number; i++){
+            if (i < 2){
+                document.write(i + '</br>')
+            } else {
+                a2 = a0 + a1;
+                a0 = a1;
+                a1 = a2;
+                document.write(a2 + '</br>')
+            }
+        }
+    }
+    Finonaci(15)
+</script>
+</body>
+</html>
