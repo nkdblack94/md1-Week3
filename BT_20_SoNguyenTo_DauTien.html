@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hiển thị số nguyên tố</title>
+</head>
+<body>
+<script>
+    let n = 2;
+    let count = 0;
+    let songuyento = true;
+
+    while (count < 20){
+        songuyento = true;
+        for (let i = 2; i <= n/2; i++){
+            if (n % i === 0){
+                songuyento = false;
+                break;
+            }
+        }
+
+        if (songuyento){
+            document.write(n + '<br>');
+            count++;
+        }
+        n++;
+    }
+</script>
+</body>
+</html>
