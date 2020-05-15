@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function triangle(number) {
+        let result = '';
+        for (let i = 0; i < number; i++) {
+            document.write(result += '*');
+            document.write('<br>');
+        }
+    }
+
+    triangle(10);
+    document.write('<br>');
+
+    function triangle1(number) {
+        for (let i = 0; i < number; i++) {
+            for (let j = 0; j < number - i; j++) {
+                document.write('*');
+            }
+            document.write('<br>');
+        }
+    }
+
+    triangle1(10);
+    document.write('<br>');
+
+    function triangle2(number) {
+        for (let i = 0; i < number; i++) {
+            for (let j = 1; j < number - i; j++) {
+                document.write('&nbsp&nbsp');
+            }
+            for (let x = number - i; x <= number; x++) {
+                document.write('*');
+            }
+            document.write('<br>');
+        }
+    }
+
+    triangle2(10);
+    document.write('<br>');
+
+
+    function triangle3(number) {
+        for (let i = number; i > 0; i--){
+            for (let j = number - i; j < number - i; j++){
+                document.write('&nbsp&nbsp');
+            }
+            for (let x = (number + 1) - i; x <= number; x++){
+                document.write('*');
+            }
+            document.write('<br>')
+        }
+    }
+
+    triangle3(10)
+</script>
+</body>
+</html>
