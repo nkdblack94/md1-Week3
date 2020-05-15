@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div align="center">
+    <h1 style="color: crimson">"Hãy thử đoán xem!"</h1>
+    <button type="button" onclick="Game()">Click</button>
+</div>
+
+<script>
+    function Game() {
+        let n = parseInt(prompt('Bạn muốn Đoán trong khoảng nào'));
+        let r = Math.floor(Math.random() * n);
+        for (let i = 0; i < 2; i++) {
+            n = parseInt(prompt('Bạn muốn đoán số ???'));
+            if (n === r) {
+                alert('Chúc Mừng Bạn Đã Thắng');
+                break;
+            } else {
+                n = parseInt(prompt('Đoán lại lần nữa nhé ???'));
+                if (n !== r){
+                    alert('Bạn Thua Rồi!!');
+                    break;
+                }
+            }
+        }
+    }
+</script>
+</body>
+</html>
