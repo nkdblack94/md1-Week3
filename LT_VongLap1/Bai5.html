@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let i = 1, total = 0, number = 0;
+    while (i <= 30) {
+        if (number % 7 === 0) {
+            document.write(number + '<br>');
+            total += number;
+            i++;
+        }
+        number++;
+    }
+    document.write('Tổng 30 số tự nhiên đầu tiên chia hết cho 7 là: ' + total);
+</script>
+</body>
+</html>
