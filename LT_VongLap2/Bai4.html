@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function longEdge(number) {
+        for (let i = 0; i < number; i++) {
+            document.write('*')
+        }
+    }
+
+    longEdge(40);
+    for (let x = 0; x < 5; x++) {
+        document.write('<br>');
+        document.write('*');
+        for (let j = 0; j <= 37; j++) {
+            document.write('&nbsp&nbsp')
+        }
+        document.write('*');
+    }
+    document.write('<br>');
+    longEdge(40);
+
+
+</script>
+</body>
+</html>
