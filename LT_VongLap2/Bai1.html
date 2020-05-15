@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function fibinaci(number){
+        let i = 1;
+        let a0 = 0, a1 =1, a2 = 0;
+        while (i < number){
+            if (i < 2){
+                document.write(i + '<br>')
+            } else {
+                a2 = a0 + a1;
+                a0 = a1;
+                a1 = a2;
+                document.write(a2+ '<br>')
+            }
+            i++
+        }
+    }
+    let n = prompt('Nhập số lần in dãy fibonaci');
+fibinaci(n)
+</script>
+</body>
+</html>
