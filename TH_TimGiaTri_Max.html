@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let array = [11, -2, 50, 3, -3, 18, 0, 9];
+    let max = array[0];
+    let location1 = 0;
+
+    for (let i = 0; i < array.length; i++){
+        if (array[i] > max){
+            max = array[i];
+            location1 = i;
+        }
+    }
+    document.write('Max của mảng là: ' + max + ' ở vị trí ' + location1);
+</script>
+</body>
+</html>
