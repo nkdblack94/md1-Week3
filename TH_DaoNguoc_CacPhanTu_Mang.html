@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let arr = [-3,5,1,3,2,10];
+    let dau = 0;
+    let cuoi = arr.length - 1;
+
+    while (dau < cuoi){
+        let x = arr[dau];
+        arr[dau] = arr[cuoi];
+        arr[cuoi] = x
+        dau++;
+        cuoi--;
+    }
+    document.write('Mảng đc đảo ngược: ' + arr);
+
+    // arr.reverse();
+    // document.write('đảo ngược arr ' + arr)
+</script>
+</body>
+</html>
