@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" id="txt"/>
+<button type="button" id="add" onclick="add_Element_To_Array()">Add</button>
+<button type="button" id="display" onclick="disPlay()">Display</button>
+<div id="result"></div>
+<script>
+let x = 0;
+let array = Array();
+
+function add_Element_To_Array() {
+    array[x] = document.getElementById('txt').value;
+    alert('Phần tử ' + array[x] + ' Thêm vào vị trí array ' + x);
+    x++;
+    document.getElementById('txt').value = "";
+}
+
+function disPlay() {
+    let e = '<hr>';
+    for (let i = 0; i < array.length; i++){
+        e += 'Element ' + i + ' = ' + array[i] + '<br>';
+    }
+    document.getElementById('result').innerHTML = e;
+}
+</script>
+</body>
+</html>
