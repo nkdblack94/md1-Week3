@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div align="center">
+    <h1 style="color: crimson">Type anthing slowly</h1>
+    <textarea style="width: 350px; height: 150px" id="txt" onkeypress="Run()"></textarea>
+</div>
+
+<script>
+    let arr = ['T', 'Ô', 'I', ' ', 'L', 'À', ' ', 'M', 'Ộ', 'T', ' ', 'Đ', 'Ứ', 'A', ' ', 'N', 'G', 'Ố', 'C', ' ', '!', '!'];
+
+    function Run(){
+        let x = document.getElementById('txt').value;
+        let text = '';
+        for (let i = 0; i < x.length; i++){
+            text += arr[i];
+            if (i === 22){
+                document.getElementById('txt').value = '';
+                text = '';
+            }
+        }
+        document.getElementById('txt').value = text;
+        setTimeout("Run()", 0.01)
+    }
+
+
+</script>
+</body>
+</html>
