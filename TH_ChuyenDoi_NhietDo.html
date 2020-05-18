@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script language="JavaScript">
+        function convert(so) {
+            let C = 0;
+            if (so){
+                C = (so - 32 ) / 1.8;
+                document.getElementById('txt').innerHTML =' Celcius: ' + C;
+            }
+        }
+    </script>
+</head>
+<body>
+<h1>Chuyển đổi độ F sang độ C</h1>
+Fahrenheit: <input id="number" type="text"/>
+<button type="button" onclick="convert(number.value)">Click</button>
+<div id="txt" style="color: blue"></div>
+</body>
+</html>
