@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let n = parseInt(prompt('Nhập số giá trị truyền vào'));
+    let array = [];
+    for (let i = 0; i < n; i++){
+        let number = parseInt(prompt('Phần tử tại vị trí: ' + i));
+        array.push(number);
+    }
+    let max = array[0], x = 0;
+    for (let j = 0; j < array.length; j++){
+        if (array[j] > max){
+            max = array[j];
+            x = j
+        }
+    }
+    document.write('Max của array là ' + max + ' ở vị trí ' + x);
+</script>
+</body>
+</html>
