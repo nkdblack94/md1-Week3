@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function processConfirm(answer) {
+        let result = '';
+        if (answer) {
+            result = alert('ok chiến thôi')
+        } else {
+            result = alert('sợ thì về với vợ đi')
+        }
+        return result;
+    }
+
+    let confirmAnswer = confirm('Chơi với tao 1 trò chơi');
+    processConfirm(confirmAnswer);
+</script>
+</body>
+</html>
