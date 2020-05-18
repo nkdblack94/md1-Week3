@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let n = parseInt(prompt('nhập số lần giá trị truyền vào mảng'));
+    let array = [];
+    let x = 0;
+
+    for (let i = 0; i < n; i++) {
+        let number = parseInt(prompt('array ở vị trí: ' + i));
+        array.push(number);
+    }
+
+    let v = parseInt(prompt('nhập số cần kiểm tra'));
+
+    for (let j = 0; j < array.length; j++) {
+        if (v === array[j]) {
+            array.splice(j, 1);
+            array.push(0);
+        }
+    }
+    console.log(array);
+
+</script>
+</body>
+</html>
