@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let a = parseInt(prompt('Số lần nhập '));
+    let array = [];
+    let n = 0;
+    let result = '';
+    for (let i = 0; i < a; i++){
+        let number = parseInt(prompt('Nhập số: ' + i))
+        array.push(number);
+    }
+    for (let j = 0; j < array.length; j++){
+        if (array[j] >= 10){
+            result += array[j] + ', ';
+            n++;
+        }
+    }
+    document.write('Có ' + n + ' số lơn hơn hoặc bằng 10 là: ' + result);
+</script>
+</body>
+</html>
