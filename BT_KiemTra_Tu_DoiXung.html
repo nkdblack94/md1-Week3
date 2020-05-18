@@ -15,9 +15,9 @@
         if (firstly !== final) {
             return false;
         } else {
-            arr.shift();
-            arr.pop();
-            return isPalindrome(arr)
+            arr.shift(); // cắt ký tự đầu tiên
+            arr.pop(); // cắt ký tự cuối cùng
+            return isPalindrome(arr) // sử dụng đệ Q
         }
     }
 
