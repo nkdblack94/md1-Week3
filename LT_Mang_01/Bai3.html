@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let n = parseInt(prompt('Nhập số giá trị truyền vào'));
+    let array = [];
+    for (let i = 0; i < n; i++){
+        let number = parseInt(prompt('Phần tử tại vị trí: ' + i));
+        array.push(number);
+    }
+    let max = array[0];
+    let total = 0, tb = 0;
+    for (let j = 0; j < array.length; j++){
+        total += array[j];
+        if (array[j] > max){
+            max = array[j];
+        }
+    }
+    tb = total / array.length;
+    document.write('Max của array là ' + max + '<br>' + ' Giá trị trung bình của mảng là: ' + tb);
+</script>
+</body>
+</html>
