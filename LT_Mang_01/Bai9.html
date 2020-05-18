@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let n = parseInt(prompt('nhập số lần giá trị truyền vào mảng'));
+    let array1 = [];
+    let array2 = [];
+
+    for (let i = 0; i < n; i++) {
+        let number = parseInt(prompt('array1 ở vị trí: ' + i));
+        array1.push(number);
+    }
+    for (let i = 0; i < n; i++) {
+        let number = parseInt(prompt('array2 ở vị trí: ' + i));
+        array2.push(number);
+    }
+    console.log(array1);
+    console.log(array2);
+    let array3 = new Array(array1.length + array2.length);
+    for (let  j = 0; j < array3.length; j++){
+        if (j < array1.length){
+          array3[j] = array1[j];
+        } else {
+            array3[j] = array2[j - array1.length]
+        }
+    }
+
+    console.log(array3);
+
+
+</script>
+</body>
+</html>
