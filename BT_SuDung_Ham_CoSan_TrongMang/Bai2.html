@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script language="JavaScript">
+    let number = parseInt(prompt('Bạn muốn nhập ? số'));
+    let array = number.toString();
+    let result = [array[0]];
+
+    for (let i = 1; i < array.length; i++){
+        if ((array[i -1] % 2 === 0) && (array[i] % 2 === 0)){
+            result.push('-', array[i])
+        } else {
+            result.push(array[i])
+        }
+    }
+
+   console.log(result.join(''))
+</script>
+</body>
+</html>
