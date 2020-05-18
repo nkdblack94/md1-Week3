@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let number = parseInt(prompt('Khoi tao mang 2 chieu'));
+    let array = [];
+
+    for (let x = 0; x < number; x++) {
+        let arr = [];
+        for (let j = 0; j < number; j++) {
+            let n = parseInt(prompt('Nhap array ' + x));
+            arr.push(n)
+        }
+        array.push(arr)
+    }
+
+    for (let i in array) {
+        document.write('row ' + i + '<br/>');
+        for (let j in array[i]) {
+            document.write(' ' + array[i][j]);
+        }
+        document.write('<br/>')
+    }
+
+    console.log(array)
+</script>
+</body>
+</html>
