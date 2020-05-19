@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+    .input {
+        margin-left: 100px;
+        width: 50px;
+        height: 30px;
+        background: green;
+        color: white;
+    }
+
+    button {
+        width: 50px;
+        height: 30px;
+        background: green;
+        color: white;
+    }
+
+    .input1 {
+        width: 150px;
+        height: 20px;
+    }
+</style>
+<body>
+<div>
+    <h1 style="color: blue">Add New Product</h1>
+    <input type="text" id="text" class="input1"/>
+    <button type="button" onclick="add()"> Add</button>
+    <div id="outPut"></div>
+</div>
+
+<script>
+    let array = Array();
+
+    function add() {
+        let value = document.getElementById('text').value;
+        if (value === '') {
+            alert('Bạn cần nhập sản phẩn');
+        } else {
+            array.push(value);
+            document.getElementById('text').value = '';
+            display()
+        }
+
+    }
+
+    console.log(array);
+
+    function display() {
+        let table = '<table>';
+        for (let i = 0; i < array.length; i++) {
+            table = table + '<tr>';
+            table = table + '<td id="product' + i + '">' + array[i] + '</td>'
+                + '<td>' + '<input type="button" value="Edit" class="input" onclick="editProduct('+ i +')"/>' + '</td>'
+                + '<td>' + '<input type="button" value="Delete" class="input" onclick="deleteProduct()"/>' + '</td>';
+            table = table + '<tr>';
+        }
+        table = table + '</table>';
+        document.getElementById('outPut').innerHTML = table;
+    }
+
+    function deleteProduct(position) {
+        array.splice(position, 1);
+        display()
+    }
+
+    function editProduct(position) {
+        let editString = '<input type="text" id="productName' + position + '"/>'
+            + '<input type="button" value="Save" class="input" onclick="saveNewName(' + position + ')"/>';
+        document.getElementById('product' + position + '').innerHTML = editString;
+    }
+
+    function saveNewName(position) {
+        let newName = document.getElementById('productName' + position + '').value;
+        array[position] = newName;
+        display()
+    }
+</script>
+</body>
+</html>
