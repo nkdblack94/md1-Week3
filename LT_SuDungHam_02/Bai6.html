@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h2> kiểm tra xem nếu số đưa vào có phải là nguyên dương không.</h2>
+<input type="text" id="input" oninput="check(input.value)"/>
+<samp id="txt"></samp>
+
+<script>
+    function check(number) {
+        let n = parseInt(number);
+        let result;
+        if (n > 0){
+            result = true;
+        } else {
+            result = false
+        }
+        document.getElementById('txt').innerHTML = result;
+    }
+</script>
+</body>
+</html>
