@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<input type="text" id="input" oninput="check(input.value)"/>
+<samp id="txt"></samp>
+<body>
+<script>
+    function check(number) {
+        if (!isNaN(number)){
+            document.getElementById('txt').innerHTML = 'Ký tự nhập vào là số'
+        } else {
+            document.getElementById('txt').innerHTML = 'Ký tự nhập vào ko phải số'
+        }
+    }
+</script>
+</body>
+</html>
