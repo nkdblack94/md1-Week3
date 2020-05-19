@@ -4,16 +4,20 @@
     <meta charset="UTF-8">
     <title>Title</title>
 </head>
+<body>
+<h2>kiểm tra xem ký tự nhập vào có phải là ký tự số không</h2>
 <input type="text" id="input" oninput="check(input.value)"/>
 <samp id="txt"></samp>
-<body>
+
 <script>
     function check(number) {
+        let result = '';
         if (!isNaN(number)){
-            document.getElementById('txt').innerHTML = 'Ký tự nhập vào là số'
+            result = true
         } else {
-            document.getElementById('txt').innerHTML = 'Ký tự nhập vào ko phải số'
+            result = false;
         }
+        document.getElementById('txt').innerHTML = result;
     }
 </script>
 </body>
