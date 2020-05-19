@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" id="number"/>
+<button type="button" onclick="alertNumber(number.value)">click</button>
+<div id="txt"></div>
+<script>
+    function alertNumber(number) {
+        let n = parseInt(number);
+        n++;
+        document.getElementById('txt').innerHTML = ' tăng giá trị đối số lên 1: ' + n;
+    }
+</script>
+</body>
+</html>
