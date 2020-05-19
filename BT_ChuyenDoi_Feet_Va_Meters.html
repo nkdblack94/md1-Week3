@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Chuyển đổi từ feet sang meters:</h1>
+<input type="text" id="feet"/>
+<button type="button" onclick="footToMeter(feet.value)">click</button>
+<div id="txt"></div>
+<h1>Chuyển đổi từ meters sang feet:</h1>
+<input type="text" id="meter"/>
+<button type="button" onclick="meterToFoot(meter.value)">click</button>
+<div id="txt1"></div>
+<script>
+    function footToMeter(meter) {
+        let n = parseInt(meter);
+        let feet = 0;
+        feet = n * 0.305;
+        document.getElementById('txt').innerHTML = n + ' meter = ' + feet + ' feet'
+    }
+    
+    function meterToFoot(feet) {
+        let n = parseInt(feet);
+        let meter = 0;
+        meter = n * 3.279
+        document.getElementById('txt1').innerHTML = n + ' feet = ' + meter + ' meter'
+    }
+</script>
+</body>
+</html>
