@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h3>nhận vào 3 số nguyên bất kỳ, trả về số nguyên có giá trị nhỏ nhất</h3>
+<input type="text" id="input1"/>
+<input type="text" id="input2"/>
+<input type="text" id="input3"/>
+<button type="button" onclick="count(input1.value, input2.value, input3.value)">Click</button>
+<div id="txt"></div>
+
+<script>
+    function count(number1, number2, number3) {
+        let n1 = parseInt(number1);
+        let n2 = parseInt(number2);
+        let n3 = parseInt(number3);
+        let result = '';
+
+        if (n1 < n2 && n1 < n3){
+            result = n1;
+        } else if (n2 < n3 && n2 < n1){
+            result = n2;
+        } else {
+            result = n3;
+        }
+        document.getElementById('txt').innerHTML = result + ' Là số nhỏ nhất'
+    }
+</script>
+</body>
+</html>
