@@ -21,7 +21,7 @@
     }
 
     .input1 {
-        width: 150px;
+        width: 250px;
         height: 20px;
     }
 </style>
@@ -67,7 +67,7 @@
     }
 
     function editProduct(position) {
-        let editString = '<input type="text" id="productName' + position + '"/>'
+        let editString = '<input type="text" id="productName' + position + '" style="height: 20px"/>'
             + '<input type="button" value="Save" class="input" onclick="saveNewName(' + position + ')"/>';
         document.getElementById('product' + position + '').innerHTML = editString;
     }
