@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Tính diện tích chu vi hình tròn</h1>
+<input type="text" id="input">
+<button type="button" onclick="countS(input.value)">Click</button>
+<div id="s"></div>
+<div id="c"></div>
+<script>
+    function countS(number) {
+        let n = parseInt(number);
+        const PI = 3.14;
+        let s = (n ** 2) * PI;
+        let c = 2 * n * PI;
+        document.getElementById('s').innerHTML = 'S hình tròn có bán kính ' + n + ' là: ' + s;
+        document.getElementById('c').innerHTML = 'C hình tròn có bán kính ' + n + ' là: ' + c;
+    }
+</script>
+</body>
+</html>
