@@ -13,6 +13,11 @@
         color: white;
     }
 
+    .input1 {
+        width: 250px;
+        height: 20px;
+    }
+
     button {
         width: 50px;
         height: 30px;
@@ -20,9 +25,11 @@
         color: white;
     }
 
-    .input1 {
-        width: 250px;
-        height: 20px;
+    td {
+        background: whitesmoke;
+        color: blue;
+    }
+    table {
     }
 </style>
 <body>
@@ -49,7 +56,7 @@
     }
 
     function display() {
-        let table = '<table>';
+        let table = '<table cellspacing="0" cellpadding="0">';
         for (let i = 0; i < array.length; i++) {
             table = table + '<tr>';
             table = table + '<td id="product' + i + '">' + array[i] + '</td>'
