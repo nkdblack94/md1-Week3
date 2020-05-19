@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body onload="addArray()">
+<h2>Viết hàm truyền vào một mảng ký tự, và một ký tự bất kỳ, kiểm tra xem ký tự bất kỳ đó có nằm trong mảng không</h2>
+<div id="out"></div>
+<input type="text" id="input"/>
+<button type="button" onclick="check(input.value)">Click</button>
+<div id="txt"></div>
+<script>
+    let array = [];
+    function addArray() {
+        let number = parseInt(prompt('Khởi tạo mảng gồm '));
+        for (let i = 0; i < number; i++){
+            let a = prompt('Phần tử: ' + i);
+            array.push(a)
+        }
+        document.getElementById('out').innerHTML = 'Mảng mới khởi tạo: ' + array;
+    }
+    function check(str) {
+        let n = 0;
+        for (let i = 0; i < array.length; i++){
+            if (str === array[i]){
+                n++;
+            }
+        }
+        document.getElementById('txt').innerHTML = 'Có ' + n + ' ký tự trong mảng';
+        if (n <= 0){
+            document.getElementById('txt').innerHTML = '-1';
+        }
+
+    }
+
+</script>
+</body>
+</html>
