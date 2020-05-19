@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        button {
+            background: green;
+            color: white;
+        }
+        .input {
+            margin-left: 100px;
+            background: green;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+<div align="center">
+    <h2>Add New Product</h2>
+    <input type="text" id="input" placeholder="New Product"/>
+    <button type="button" onclick="addProduct()"> Add </button>
+    <div id="outPut"></div>
+</div>
+
+
+<script>
+    let array = Array();
+
+    function addProduct() {
+        let value = document.getElementById('input').value;
+        if (value === ''){
+            alert('Bạn cần nhập sản phẩm')
+        } else {
+            array.push(value);
+            document.getElementById('input').value = "";
+            display()
+        }
+
+    }
+    function display() {
+        let t = '<table>';
+        for (let i = 0; i < array.length; i++) {
+            t = t + "<tr>";
+            t = t + "<td id='product" + i + "'>" + array[i] + "</td>" +
+                "<td><input type='button' value='Edit' class='input' onclick='editProduct("+ i +")'/></td>" +
+                "<td><input type='button' value='Delete' class='input' onclick='deleteProduct()'/></td>"
+            t = t + "</tr>";
+        }
+        t = t + "</table>";
+        document.getElementById('outPut').innerHTML = t;
+    }
+
+    function deleteProduct(position) {
+        array.splice(position, 1);
+        display();
+    }
+
+    function editProduct(position) {
+        let editString = "<input type='text' id='productName" + position +"'/>" +
+            "<button type='button' value='Save' onclick='saveNewName("+ position +")'>Save</button>";
+        document.getElementById("product" + position +"").innerHTML = editString;
+    }
+
+    function saveNewName(position) {
+        let newName = document.getElementById("productName" + position + "").value;
+        array[position] = newName;
+        display();
+    }
+</script>
+</body>
+</html>
