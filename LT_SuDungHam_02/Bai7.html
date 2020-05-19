@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Viết hàm truyền vào 2 số nguyên bất kì, thực hiện đổi chỗ hai số nguyên đó.</h1>
+<samp>Nhập số a</samp><input type="text" id="input1"/>
+<samp>Nhập số b</samp><input type="text" id="input2"/>
+<button type="button" onclick="convert(input1.value, input2.value)">Click</button>
+<h3>Đổi chỗ 2 số nguyên vuằ nhập</h3>
+<div id="txt"></div>
+<script>
+    function convert(number1, number2) {
+        let a = parseInt(number1);
+        let b = parseInt(number2);
+        let result = a;
+        a = b;
+        b = result;
+        document.getElementById('txt').innerHTML = 'Số a: ' + a + '<br>' + ' Số b: ' + b;
+    }
+</script>
+</body>
+</html>
