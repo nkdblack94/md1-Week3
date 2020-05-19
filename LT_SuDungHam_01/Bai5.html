@@ -6,25 +6,21 @@
 </head>
 <body onload="search()">
 <script>
-    let star = ['Polaris', 'Aldebaran', 'Deneb', 'Vega', 'Altair', 'Dubhe', 'Regulus'];
-    let Constellation = ['Ursa Minor', 'Tarurus', 'Cygnus', 'Lyra', 'Aquila', 'Ursa Major', 'Leo'];
     function search() {
-        let name = prompt('Nhập chòm sao cần tìm');
-        let result = false;
-        let index = 0;
-       for (let i = 0; i < star.length; i++){
-           if (name === star[i]){
-              result = true;
-               index = i
-           }
-       }
-       if (result){
-           document.write(Constellation[index]);
-       } else {
-           document.write('không tìm thấy')
-       }
-    }
+        let array1 = ['Polaris', 'Aldebaran', 'Deneb', 'Vega', 'Altair', 'Dubhe', 'Regulus'];
+        let array2 = ['Ursa Minor', 'Tarurus', 'Cygnus', 'Lyra', 'Aquila', 'Ursa Major', 'Leo'];
+        let a = prompt('nhập tên ngôi của ngôi sao');
+        let kq = '';
 
+        for (let i = 0; i <= array1.length; i++) {
+            if (a === array1[i]) {
+                kq = array2[i];
+                alert('chòm sao tương ứng là: ' + kq);
+                break;
+            }
+        }
+        if(kq === '')alert('Không tìm thấy');
+    }
 </script>
 </body>
 </html>
