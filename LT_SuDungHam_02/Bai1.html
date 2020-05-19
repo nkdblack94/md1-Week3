@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h4>Tính Bình phương của một số</h4>
+<input type="number" id="input"/>
+<button type="button" onclick="square(input.value)">Click</button>
+<div id="txt"></div>
+<script>
+    function square(number) {
+        let n = parseInt(number);
+        n = n ** 2;
+        document.getElementById('txt').innerHTML = n;
+    }
+</script>
+</body>
+</html>
