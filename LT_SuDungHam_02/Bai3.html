@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Tính giai thừa của một số nguyên dương</h1>
+Giai thừa của <input type="number" id="input" oninput="factorial(input.value)"/>
+<samp id="txt"></samp>
+
+<script>
+    function factorial(number) {
+        let n = parseInt(number);
+        let result = 1;
+
+        for (let i = 1; i <= n; i++){
+            result = result * i
+        }
+        document.getElementById('txt').innerHTML =' Là: ' + result;
+    }
+</script>
+</body>
+</html>
