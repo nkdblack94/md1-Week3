@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" id="number1"/>
+<input type="text" id="number2"/>
+<button type="button" onclick="alertNumber(number1.value, number2.value)">click</button>
+<script>
+    function alertNumber(number1, number2) {
+        let n1 = parseInt(number1);
+        let n2 = parseInt(number2);
+        let n3 = 0;
+
+        if (n1 > n2){
+            alert('Thám số thứ nhất lớn hơn tham số thứ hai')
+        } else {
+            n3 = n1 + n2;
+            alert('Tổng của 2 tham số là: ' + n3)
+        }
+    }
+</script>
+</body>
+</html>
