@@ -4,9 +4,21 @@
     <meta charset="UTF-8">
     <title>Title</title>
 </head>
-<body>
+<body onload="addArray()">
 <script>
+    function addArray() {
+        let number = parseInt(prompt('Khởi tạo mảng gồm '));
+        let array = [];
+        for (let i = 0; i < number; i++){
+            let a = parseInt(prompt('Phần tử: ' + i));
+            array.push(a)
+        }
+        document.write(array + '<br>');
 
+        array.reverse();
+
+        document.write('Đảo ngược Mảng: ' + array)
+    }
 </script>
 </body>
 </html>
